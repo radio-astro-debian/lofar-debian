@@ -1,15 +1,18 @@
 Source: lofar
-Section: unknown
+Section: science
 Priority: extra
 Maintainer: Gijs Molenaar <gijs@pythonic.nl>
-Build-Depends: debhelper (>= 8.0.0), cmake
+Build-Depends: debhelper (>= 8.0.0), cmake, lwimager, bison, libcasacore-dev,
+ libboost-dev, libreadline-dev, libblitz0-dev, flex, wcslib-dev,
+ libcfitsio3-dev, gfortran, libboost-thread-dev, libfftw3-dev,
+ libhdf5-lam-dev | libhdf5-mpi-dev | libhdf5-mpich-dev | libhdf5-openmpi-dev |
+ libhdf5-serial-dev, python-pyrap, libboost-python-dev, python-all
 Standards-Version: 3.9.2
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/lofar.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/lofar.git;a=summary
+Homepage: http://www.lofar.org
+X-Python-Version: 2.7
 
 Package: lofar
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>

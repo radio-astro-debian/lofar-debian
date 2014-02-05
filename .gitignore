@@ -1,0 +1,6 @@
+lofar.debhelper.log
+files
+lofar.postinst.debhelper
+lofar.prerm.debhelper
+lofar.substvars
+lofar/
