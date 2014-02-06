@@ -14,5 +14,9 @@ X-Python-Version: 2.7
 Package: lofar
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Conflicts: makems
+Description: subset of LOFAR software
+ specificly: CEP/PyBDSM CEP/MS CEP/Calibration CEP/Imager CEP/ParmDB
+             CEP/LMWCommon LCS/Blob LCS/Common
+ this is taken from the non-public svn repo at:
+ https://svn.astron.nl/viewvc/LOFAR/
