@@ -2,10 +2,14 @@
 # -*- makefile -*-
 
 # Uncomment this to turn on verbose mode.
-export DH_VERBOSE=1
+#export DH_VERBOSE=1
+
+# f2py doesn't work correctly if debian sets these
+unexport FFLAGS
+unexport LDFLAGS
 
 override_dh_auto_configure:
-	 dh_auto_configure -- -DCMAKE_MODULE_PATH:PATH=$(CURDIR)/CMake \
+	 dh_auto_configure -- -DCMAKE_MODULE_PATH=$(CURDIR)/CMake \
 		 -DUSE_LOG4CPLUS=OFF -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=ON \
 		 -DUSE_OPENMP=ON -DBUILD_PACKAGES="LofarFT pystationresponse PyBDSM MS" \
 		 -DCASAREST_ROOT_DIR:PATH=/usr/include/casarest
