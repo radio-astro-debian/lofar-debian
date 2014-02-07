@@ -1,3 +1,10 @@
+lofar (2.0.3-2precise1) precise; urgency=low
+
+  * add DPPP
+  * add missing dependencies
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Fri, 07 Feb 2014 11:56:51 +0200
+
 lofar (2.0.3-1precise1) precise; urgency=low
 
   * Initial release

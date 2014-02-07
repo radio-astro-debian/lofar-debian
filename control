@@ -5,8 +5,10 @@ Maintainer: Gijs Molenaar <gijs@pythonic.nl>
 Build-Depends: debhelper (>= 8.0.0), cmake, lwimager, bison, libcasacore-dev,
  libboost-dev, libreadline-dev, libblitz0-dev, flex, wcslib-dev,
  libcfitsio3-dev, gfortran, libboost-thread-dev, libfftw3-dev,
- libhdf5-lam-dev | libhdf5-mpi-dev | libhdf5-mpich-dev | libhdf5-openmpi-dev |
- libhdf5-serial-dev, python-pyrap, libboost-python-dev, python-all
+ libhdf5-serial-dev | libhdf5-lam-dev | libhdf5-mpi-dev | libhdf5-mpich-dev |
+ libhdf5-openmpi-dev, python-pyrap, libboost-python-dev, python-all,
+ python-numpy, libgsl0-dev, libxml2-dev, libpng12-dev, libboost-system-dev,
+ libboost-filesystem-dev, libgtkmm-2.4-dev
 Standards-Version: 3.9.2
 Homepage: http://www.lofar.org
 X-Python-Version: 2.7
