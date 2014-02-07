@@ -1,3 +1,9 @@
+lofar (2.0.3.1-1precise1) precise; urgency=low
+
+  * fake new upstream release, PPA doesn't accept changed orig tgz
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Fri, 07 Feb 2014 12:10:05 +0200
+
 lofar (2.0.3-2precise1) precise; urgency=low
 
   * add DPPP
