@@ -1,3 +1,9 @@
+lofar (2.0.3.1-2precise1) precise; urgency=low
+
+  * we need pywcs >= 1.11
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Thu, 20 Feb 2014 14:49:42 +0200
+
 lofar (2.0.3.1-1precise1) precise; urgency=low
 
   * fake new upstream release, PPA doesn't accept changed orig tgz
