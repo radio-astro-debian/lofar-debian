@@ -1,32 +1,21 @@
-Description: disable bytecompile
- Let debian do that.
+Description: disable python byte compilation
 
---- lofar-2.0.3.orig/CMake/PythonInstall.cmake
-+++ lofar-2.0.3/CMake/PythonInstall.cmake
-@@ -81,16 +81,16 @@ macro(python_install)
+--- lofar-2.1.1.orig/CMake/PythonInstall.cmake
++++ lofar-2.1.1/CMake/PythonInstall.cmake
+@@ -81,16 +81,6 @@ macro(python_install)
      execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink
        ${_py_abs} ${_build_dir}/${_py})
      install(FILES ${_py} DESTINATION ${_inst_dir}/${_py_path})
--    set(_py_code
--      "import py_compile"
--      "print('-- Byte-compiling: ${_inst_dir}/${_py}')"
--      "py_compile.compile('${_inst_dir}/${_py}', doraise=True)")
--    install(CODE 
--      "execute_process(COMMAND ${PYTHON_EXECUTABLE} -c \"${_py_code}\"
--                       RESULT_VARIABLE _result)
--       if(NOT _result EQUAL 0)
--         message(FATAL_ERROR \"Byte-compilation FAILED: ${_inst_dir}/${_py}\")
--       endif(NOT _result EQUAL 0)")
-+    #    set(_py_code
-+    #  "import py_compile"
-+    #  "print('-- Byte-compiling: ${_inst_dir}/${_py}')"
-+    #  "py_compile.compile('${_inst_dir}/${_py}', doraise=True)")
-+    #install(CODE 
-+    #  "execute_process(COMMAND ${PYTHON_EXECUTABLE} -c \"${_py_code}\"
-+    #                   RESULT_VARIABLE _result)
-+    #   if(NOT _result EQUAL 0)
-+    #     message(FATAL_ERROR \"Byte-compilation FAILED: ${_inst_dir}/${_py}\")
-+    #   endif(NOT _result EQUAL 0)")
+-    #    set(_py_code
+-    #  "import py_compile"
+-    #  "print('-- Byte-compiling: ${_inst_dir}/${_py}')"
+-    #  "py_compile.compile('${_inst_dir}/${_py}', doraise=True)")
+-    #install(CODE 
+-    #  "execute_process(COMMAND ${PYTHON_EXECUTABLE} -c \"${_py_code}\"
+-    #                   RESULT_VARIABLE _result)
+-    #   if(NOT _result EQUAL 0)
+-    #     message(FATAL_ERROR \"Byte-compilation FAILED: ${_inst_dir}/${_py}\")
+-    #   endif(NOT _result EQUAL 0)")
    endforeach(_py ${_py_files})
  
    # Make sure that there's a __init__.py file in each build/install directory.

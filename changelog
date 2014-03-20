@@ -1,3 +1,10 @@
+lofar (2.1.1-1precise1) precise; urgency=low
+
+  * new upstream release
+  * dont install msselect
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Thu, 20 Mar 2014 16:41:11 +0200
+
 lofar (2.0.3.1-2precise1) precise; urgency=low
 
   * we need pywcs >= 1.11
