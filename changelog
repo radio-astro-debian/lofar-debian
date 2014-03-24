@@ -1,3 +1,9 @@
+lofar (2.1.1-2precise1) precise; urgency=low
+
+  * disable aoflagger
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Mon, 24 Mar 2014 13:10:13 +0200
+
 lofar (2.1.1-1precise1) precise; urgency=low
 
   * new upstream release
