@@ -1,3 +1,9 @@
+lofar (2.1.1-1trusty) trusty; urgency=low
+
+  * build for trusty
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Fri, 04 Apr 2014 14:06:26 +0200
+
 lofar (2.1.1-3precise1) precise; urgency=low
 
   * disable DP3 since it depends on aoflagger
