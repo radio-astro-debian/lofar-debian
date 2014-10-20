@@ -1,3 +1,9 @@
+lofar (2.5.4-1trusty) trusty; urgency=low
+
+  * new upstream release
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 16 Oct 2014 17:58:12 +0200
+
 lofar (2.1.1-1trusty) trusty; urgency=low
 
   * build for trusty
