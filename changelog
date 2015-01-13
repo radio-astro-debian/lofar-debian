@@ -1,3 +1,9 @@
+lofar (2.7.4-1trusty) trusty; urgency=medium
+
+  * new upstream release
+
+ -- Gijs Molenaar <gijs@pythonic.nl>  Fri, 09 Jan 2015 11:24:00 +0100
+
 lofar (2.5.4-1trusty) trusty; urgency=low
 
   * new upstream release
