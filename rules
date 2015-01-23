@@ -2,14 +2,20 @@
 # -*- makefile -*-
 
 override_dh_auto_configure:
-	 dh_auto_configure -- -DCMAKE_MODULE_PATH=$(CURDIR)/CMake \
-         -DBUILD_SHARED_LIBS=ON -DBUILD_TESTING=OFF \
-		 -DUSE_OPENMP=ON  -DCASAREST_ROOT_DIR:PATH=/usr/include/casarest \
-		 -DBUILD_PACKAGES="Offline" \
+	 dh_auto_configure -- \
+		-DBUILD_PACKAGES="pyimager BBSKernel pyparameterset" \
+		-DBUILD_SHARED_LIBS=ON \
+		-DUSE_CASA42=ON \
+		-DLofarFT_SOURCE_DIR=LofarFT-4.2 \
+		-DUSE_OPENMP=ON \
+		-DPythonLibs_FIND_VERSION=2
 
 override_dh_auto_install:
 	dh_auto_install
-	touch debian/lofar/usr/lib/python2.7/dist-packages/lofar/__init__.py
+	touch debian/pyimager/usr/lib/python2.7/dist-packages/lofar/__init__.py
+
+override_dh_auto_test:
+	true
 
 %:
 	dh $@ --parallel --with python2 --builddirectory=build/gnu_opt

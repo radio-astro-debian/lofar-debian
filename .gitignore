@@ -1,6 +1,6 @@
-lofar.debhelper.log
+pyimager.debhelper.log
 files
-lofar.postinst.debhelper
-lofar.prerm.debhelper
-lofar.substvars
-lofar/
+pyimager.postinst.debhelper
+pyimager.prerm.debhelper
+pyimager.substvars
+pyimager/
