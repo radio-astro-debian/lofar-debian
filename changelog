@@ -1,3 +1,10 @@
+lofar (2.9.0-1trusty) trusty; urgency=medium
+
+  * new upstream release
+  * added missing dependencies
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 02 Apr 2015 11:23:36 +0000
+
 lofar (2.8.0-1trusty) trusty; urgency=medium
 
   * new upstream release
