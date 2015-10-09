@@ -10,3 +10,6 @@ the resulting packagages can be found on the radio-astro Ubuntu PPA:
 
  https://launchpad.net/~radio-astro/+archive/ubuntu/main
 
+packaging related issues should be reported here
+
+https://github.com/radio-astro/packaging
