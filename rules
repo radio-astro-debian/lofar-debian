@@ -6,7 +6,7 @@ override_dh_auto_configure:
          -DBUILD_SHARED_LIBS=ON -DBUILD_TESTING=OFF \
 		 -DUSE_OPENMP=ON  -DCASAREST_ROOT_DIR:PATH=/usr/include/casarest \
 		 -DBUILD_PACKAGES="Offline" -DUSE_PYTHON_COMPILATION=OFF \
-		 -DUSE_QPID=OFF 
+		 -DUSE_QPID=OFF -DCASA_ROOT=/usr
 
 override_dh_auto_install:
 	dh_auto_install
