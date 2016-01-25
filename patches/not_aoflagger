@@ -1,8 +1,8 @@
-Description: some bins conflict with AOflagger package
+Description: dont build conflicting aoflagger things
 
---- lofar-2.8.0.orig/CEP/DP3/AOFlagger/src/CMakeLists.txt
-+++ lofar-2.8.0/CEP/DP3/AOFlagger/src/CMakeLists.txt
-@@ -221,28 +221,7 @@ if(GTKMM_FOUND)
+--- lofar-2.15.0.orig/CEP/DP3/AOFlagger/src/CMakeLists.txt
++++ lofar-2.15.0/CEP/DP3/AOFlagger/src/CMakeLists.txt
+@@ -219,28 +219,7 @@ if(GTKMM_FOUND)
    include_directories(${GTKMM_INCLUDE_DIRS})
    link_directories(${GTKMM_LIBDIR})
    
@@ -31,18 +31,19 @@ Description: some bins conflict with AOflagger package
  		lofar_add_bin_program(badstations badstations.cpp ${REMOTE_FILES})
  		target_link_libraries(badstations ${GTKMM_LIBRARIES})
  		lofar_add_bin_program(aofrequencyfilter aofrequencyfilter.cpp ${REMOTE_FILES})
-@@ -252,7 +231,6 @@ else()
+@@ -250,7 +229,6 @@ else()
    message(WARNING " The graphical user interface library GTKMM was not found; rfigui and aoqplot will not be compiled.")
  endif(GTKMM_FOUND)
  
--lofar_add_bin_program(rficonsole rficonsole.cpp)
+-#lofar_add_bin_program(rficonsole rficonsole.cpp)
  lofar_add_bin_program(rfistrategy rfistrategy.cpp)
  lofar_add_bin_program(rfistatcollect rfistatcollect.cpp)
  lofar_add_bin_program(aostats aostats.cpp)
-@@ -262,11 +240,3 @@ lofar_add_bin_program(colormapper colorm
- lofar_add_bin_program(versionaoflagger versionaoflagger.cc Package__Version.cc)
+@@ -259,12 +237,3 @@ lofar_add_bin_program(ns2bbs ns2bbs.cpp)
+ lofar_add_bin_program(colormapper colormapper.cpp)
+ #lofar_add_bin_program(versionaoflagger versionaoflagger.cc Package__Version.cc)
  lofar_add_bin_program(imgzenith imgzenith.cpp imaging/zenithimager.cpp)
- 
+-
 -if(BOOST_ASIO_H_FOUND AND SIGCXX_FOUND)
 -  lofar_add_bin_program(aoquality aoquality.cpp ${REMOTE_FILES})
 -  target_link_libraries(aoquality ${SIGCXX_LIBRARIES})
